@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyProducts</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<link rel="stylesheet" href="meniu.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="meniu">
+		<a class="left" href="index.html">Home</a>
+		<a class="left" href="MyProducts.html">MyProducts</a>
+		<a class="right" href="signup.html">Sign Up</a>
+		<a class="right" href="login.html">Login</a>
+    </div>
+    <header>
+        <section class="container-header">
+                <div class="overlay not-showing" id="overlay"></div>
+                
+                  <div class="cart">
+                    <div class="cross-cart">
+                      <h2 class="title-cart">Shopping Cart</h2>
+                      <button id="close-cart" class="do mps-times" aria-label="cross" alt="cross"></button>
+                    </div>
+                    <p><span id="cart-products-number">2</span> product(s) added</p>
+                    <div id="cart-list" class="products-cart-1-y-2">
+                      
+                    </div>
+
+                    <div class="subtotal">
+                      <p>Subtotal $<span id="cart-subtotal-price">0</span></p>
+                    </div>
+                    
+                    <button type="button" class="button" id="button-buy">BUY</button>
+                  
+                      
+                    <button type="button" class="button" id="button-empty">CLEAR</button>
+                    
+
+                  </div>
+                <div class="overlay-picture-buy not-showing">
+                  <div class="picture-buy" id="picture-buy-original">
+                    <div class="container-title-buy">
+                      <h1 class="title-picture-buy">Checkout</h1>
+                    </div>
+                      <div class="container-summary-personal-dates-and-payment">
+                        <div class="container-personal-dates-and-payment">
+                          <div class="container-personal-dates">
+                            <div class="container-title-personal-dates">
+                              <h3 class="title-personal-dates">Personal Details</h2>
+                            </div>
+                            <div class="container-deposit-personal-dates line-dividing-buy">
+                                <p class="deposit-personal-dates-1">Name and Lastname *</p>
+                              <form class="input-deposit-personal-dates-1" id="form-picture-buy" name="form-email-name">
+                                <input type="text" placeholder="type here your name" name="name-lastname" id="deposit-name-full" required>
+                              
+                                <p class="deposit-personal-dates-2">Email *</p>
+                              
+                                <input type="email" placeholder="youremail@email.com" id="deposit-email" name="email" required>
+                              </form>
+                            </div>
+                          </div>
+
+                          <div class="container-options-payment">
+                            <div class="container-title-options-payment">
+                              <h3 class="title-options-payment">Payment Options</h2>
+                            </div>
+                            <form class="container-buttons-options-payment">
+                              <label>
+                                <input class="methods-of-payment" type="radio" name="payment" checked value="debit" id="button-debit"> Debit card
+                              </label>
+                              <label>
+                                <input class="methods-of-payment" type="radio" name="payment" value="credit" id="button-credit"> Credit card
+                              </label>
+                              <label>
+                                <input class="methods-of-payment" type="checkbox" name="delivery" value="delivery" id="button-delivery"> Add delivery
+                              </label>
+                              <label>
+                                <input class="methods-of-payment" type="checkbox" name="gift-card" value="giftcard" id="button-giftcard"> Add gift card
+                              </label>
+                            </form>
+                          </div>
+
+                          
+                        </div>
+
+                        <section class="summary">
+                          <div>
+                            <h3 class="title-options-payment">Overview</h2>
+                          </div>
+                          <br>
+
+                          <div class="container-surcharge-subtotales">
+                            <div class="container-subtotal">
+                              <p class="subtotal-options-payment">Subtotal</p>
+                              <p class="subtotal-price-options-payment">0</p>
+                            </div>
+                            <div class="container-giftcard not-showing surcharge">
+                              <p class="giftcard-options-payment">5% OFF</p>
+                              <p class="giftcard-price-options-payment">0</p>
+                            </div>
+                            <div class="container-delivery not-showing surcharge">
+                              <p class="delivery-options-payment">Delivery</p>
+                              <p class="delivery-price-options-payment">0</p>
+                            </div>
+                            <div class="container-surcharge not-showing surcharge">
+                              <p class="surcharge-options-payment">Card Fee</p>
+                              <p class="surcharge-price-options-payment">0</p>
+                            </div>
+                          </div>
+
+                          <div class="container-total">
+                            <p class="total-options-payment">TOTAL</p>
+                            <p class="total-price-options-payment">0</p>
+                          </div>    
+                        </section>
+                      </div>
+					  <footer class="buttons-footer-picture-buy">
+		<button type="button" id="button-continue-buying" class="button-gris-picture-continue">
+		  KEEP SHOPPING
+		</button>
+		<form class="form-send">
+		  <button type="submit" form="form-picture-buy" value="Submit" class="button-send-form">
+			SUBMIT
+		  </button>
+		</form>
+	  </footer>
+                  </div>
+                </div>
+                
+                <div class="overlay-picture-empty not-showing">
+                  
+                  <div class="picture-empty">
+                    <div class="container-title-picture-empty">
+                      <h2 class="title-picture-empty">You're about to clear items. Do you want to continue?</h2>
+                    </div>
+                    <div class="container-buttons-picture-empty">
+                      <button type="button" class="button-gris-picture-empty" id="button-cancel">CANCEL</button>
+                      <button type="button" class="button-red-picture-empty" id="clear-button">CLEAR</button>
+                    </div>
+                  </div>
+                </div>
+        </section>
+    </header>
+    <section class="container-section-principal">
+          <div class="section-principal">
+            <aside class="section-aside" id="section-aside-displayed">
+                <form class="form-principal" name="form-princ">
+                  
+                    <div class="container-buttons-aside-1">
+                        <h3 class="filtersss">FILTERS</h3>
+                        <button class="filters-clear-btn"><i class="fas fa-trash-alt" aria-label="trash bin" alt="trash bin"></i> CLEAR</button>
+                    </div>
+                        
+                    <div class="container-buttons-aside-2">
+                        <h3 class="search">SEARCH</h3>
+                        <div class="container-search" class="button-search">
+                            <input type="text" placeholder="Search products" id="search-products">
+                            <i class="fas fa-search" aria-label="Magnifier icon"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="container-buttons-aside-3 form">
+                        <h3>CATEGORY</h3>
+                            <label for="category">
+                                <input type="checkbox" name="categoria" class="category" value="cats"> CATS
+                            </label>
+                            <label for="category">
+                                <input type="checkbox" name="categoria" class="category" value="dogs"> DOGS
+                            </label>
+                            <label for="category">
+                                <input type="checkbox" name="categoria" class="category" value="hamsters"> HAMSTERS
+                            </label>
+                            <label for="category">
+                                <input type="checkbox" name="categoria" class="category" value="bunnies"> BUNNIES
+                            </label>
+                    </div>
+                    
+                    <div class="container-buttons-aside-4 form">
+                        <h3>RATING</h3>
+                            <label>
+                                <input type="checkbox" name="punctaje" class="rating-checkbox" value="5" aria-label="Five stars" alt="Five stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i> (5)
+                            </label>
+                            <label>
+                                <input type="checkbox" name="punctaje" class="rating-checkbox" value="4" aria-label="Four stars" alt="Four stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i> (4)
+                            </label>
+                            <label>
+                                <input type="checkbox" name="punctaje" class="rating-checkbox" value="3" aria-label="Three stars" alt="Three stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i> (3)
+                            </label>
+                            <label>
+                                <input type="checkbox" name="punctaje" class="rating-checkbox" value="2" aria-label="Two stars" alt="Two stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i> (2)
+                            </label>
+                            <label>
+                                <input type="checkbox" name="punctaje" class="rating-checkbox checkbox1" value="1" aria-label="One star" alt="One star">
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i> (1)
+                            </label>
+                    </div>
+                </form>
+            </aside>
+            <div class="section-products">
+              <div class="container-outside-principal-products">
+                  
+                <p class="amount-of-products">
+				Showing <span class="amount-displayed">0</span> product(s) of <span class="all-products">0</span>
+                  
+                <div class="view-buttons">
+                  View as
+                  <button type="button" class="view-btn show-grid-btn">
+                    <i class="fas fa-th" aria-label="Grid icon" alt="Grid icon"></i>
+                  </button>
+                  <button type="button" class="view-btn show-list-btn">
+                    <i class="fas fa-list" aria-label="List icon" alt="List icon"></i>
+                  </button>
+                </div>
+
+                <div class="button-responsive-filters">
+                  
+                  <button type="button" class="view-btn button-filters">
+                    <i class="fas fa-filter" aria-label="Filter icon" alt="Filter icon"></i><p class="texto-filters-responsive">Filters</p>
+                  </button>
+                  
+                </div>
+
+              </div>
+			  <section class="container-section-products" id="image-list"></section>
+            </div>
+          </div>
+    </section>
+
+    <div class="overlay-section-aside-responsive not-showing"></div>
+      <div class="section-aside-responsive">
+        <form class="form-principal" name="form-princ">
+          <div class="container-button-close-aside-responsive">
+          <button type="button" id="button-close-aside-responsive" class="do mps-times" aria-label="cross" alt="cross"></button>
+          </div>
+            <div class="container-buttons-aside-responsive-1">
+                
+                <h3 class="filtersss">FILTERS</h3>
+                <button class="filters-clear-btn"><i class="fas fa-trash-alt" aria-label="trash bin" alt="trash bin"></i> CLEAR</button>
+            </div>
+                
+            <div class="container-buttons-aside-responsive-2">
+                <h3 class="search">SEARCH</h3>
+                        <div class="container-search" class="button-search">
+                            <input type="text" placeholder="Search products" id="search-products-responsive">
+                            <i class="fas fa-search" aria-label="Magnifier icon" alt="Magnifier icon"></i>
+                        </div>
+            </div>
+            
+            <div class="container-buttons-aside-responsive-3 form">
+                <h3>CATEGORY</h3>
+                    <label for="category">
+                        <input type="checkbox" name="categoria" class="category checkbox1" value="cats"> CATS
+                    </label>
+                    <label for="category">
+                        <input type="checkbox" name="categoria" class="category checkbox1" value="dogs"> DOGS
+                    </label>
+                    <label for="category">
+                        <input type="checkbox" name="categoria" class="category checkbox1" value="hamsters"> HAMSTERS
+                    </label>
+                    <label for="category">
+                        <input type="checkbox" name="categoria" class="category checkbox1" value="bunnies"> BUNNIES
+                    </label>
+            </div>
+            
+            <div class="container-buttons-aside-responsive-4 form">
+                <h3>RATING</h3>
+                    <label>
+                        <input type="checkbox" name="punctaje" class="rating-checkbox checkbox1" value="5" aria-label="Five stars" alt="Five stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i> (5)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="punctaje" class="rating-checkbox checkbox1" value="4" aria-label="Four stars" alt="Four stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i> (4)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="punctaje" class="rating-checkbox checkbox1" value="3" aria-label="Three stars" alt="Three stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i> (3)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="punctaje" class="rating-checkbox checkbox1" value="2" aria-label="Two stars" alt="Two stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i> (2)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="punctaje" class="rating-checkbox checkbox1" value="1" aria-label="One star" alt="One star">
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i> (1)
+                    </label>
+            </div>
+        </form>
+      </div>
+	  <button id="open-cart">MyCart 🛒</button>
+      <a class = "jos">We have no 🍪 here :(</a>
+      </body>
+
+  <script src="shop_script2.js"></script>
+  <script src="shop.js"></script>
+  <script src="shopping-cart.js"></script>
+</body>
+</html>
